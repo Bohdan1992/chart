@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Создание гистограммы</title>
+    <script src="BarChart.js"></script>
+    <script>
+        window.addEventListener("load", function () {
+            var chart = createBarChart([140, 6, 88, 10, 2, 45,140, 6, 88, 10, 2, 45, 100, 150],
+                600,
+                300,
+                "green");
+
+            var container = document.getElementById("chartContainer");
+            container.appendChild(chart);
+        });
+    </script>
+</head>
+<body>
+    <div id="chartContainer"></div>
+    <script>
+        window.onload = function () {
+            var mydiv = document.querySelectorAll('div.mydiv');
+            for (var i = 0; i < mydiv.length; i++){
+                var x = document.querySelector('#div' + i);
+                var y = document.querySelector('#p' + i);
+                x.onmouseover = function (e) {
+                    y.style.display='none';
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>

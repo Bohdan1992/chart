@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #ShowHide1 { cursor: pointer; }
+        #exemple1 {
+            display: none;
+            padding: 5px;
+            background-color: #CDE;
+            border: 1px solid;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        //дожидаемся полной загрузки страницы
+        window.onload = function () {
+            //ищем элемент по селектору
+            var a = document.querySelector('#ShowHide1');
+
+            //вешаем на него события
+            a.onmouseout = function(e) {
+                document.getElementById('exemple1').style.display='none';
+            }
+
+            a.onmouseover = function(e) {
+                document.getElementById('exemple1').style.display='block';
+            };
+        }
+
+    </script>
+
+
+
+</head>
+<body>
+<span id="ShowHide1">Скрыть/показать блок</span>
+<div id="exemple1">БЛОК</div>
+</body>
+</html>
